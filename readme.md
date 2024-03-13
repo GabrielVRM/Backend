@@ -63,3 +63,54 @@ app.get('/', (req, res) => {
  res.send({ name, email });
  });
 </code>
+
+## Estrutura do Projeto
+
+- src
+  -- server.js
+  -- routes.js
+  -- controlles.js
+  -- utils.js
+  ---- database sqlite migrations
+
+# server
+
+> ponto de entrada da aplicação
+> manda a requisição a rota certa
+
+# routes
+
+> requisições que vem do server passam pelas rotas
+> indentifica qual controller vai ser utilizado
+
+# controllers
+
+> responsavel por processar as requisições!
+> parte inteligente da aplicação!
+
+## Http Codes - status code
+
+> na faixa do 100: informativo, a solicitação foi aceita ou está sendo processada!
+> <code>
+> res.status(201).json({ name, email });
+> </code>
+
+> na faixa do 200: sucesso, algum tipo de sucesso de requisição!
+> <code>
+> res.status(201).json({ name, email });
+> </code>
+
+> na faixa do 300: redirecionamento
+> <code>
+> res.status(300).json({ name, email });
+> </code>
+
+> na faixa do 400: erro do cliente, não autorizado, pagína não encontrada
+> <code>
+> res.status(400).json({ name, email });
+> </code>
+
+> na faixa do 500: erro do servidor, interno.
+> <code>
+> res.status(500).json({ name, email });
+> </code>
