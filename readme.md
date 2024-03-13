@@ -8,7 +8,7 @@
 
 > nodemon: fica observando as modificações, para reiniciar sozinho!!
 
-- nodmon --save-dev
+- nodemon --save-dev
 
 ## Rotas e Métodos HTTP
 
