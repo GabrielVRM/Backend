@@ -1,4 +1,4 @@
-## Backend
+# Backend
 
 > node: é um ambiente de execução de JavaScript baseado no motor V8 do Google Chrome. Ele permite que os desenvolvedores criem aplicativos de rede escaláveis e de alta performance, utilizando JavaScript tanto no lado do cliente quanto no lado do servidor.
 
@@ -10,11 +10,11 @@
 
 - nodemon --save-dev
 
-## Rotas e Métodos HTTP
+# Rotas e Métodos HTTP
 
 > o que é?
 
-# Route Params
+### Route Params
 
 - !OBS: Valores obrigatorios
 
@@ -27,14 +27,14 @@
 </code>
 * ! req.params.id: consigo capturar o parametro colocado no meu endpoint
 
-# Query Params
+### Query Params
 
 - !OBS: Valores Opcionais
 
 > https:localhost/users?page=2&limit=10
 > Inserir chave e valor no endpoint
 
-# Metodos de Requisições:
+### Metodos de Requisições:
 
 - - padrões para se comunicar com a API
 
@@ -73,22 +73,22 @@ app.get('/', (req, res) => {
   -- utils.js
   ---- database sqlite migrations
 
-# server
+### server
 
 > ponto de entrada da aplicação
 > manda a requisição a rota certa
 
-# routes
+### routes
 
 > requisições que vem do server passam pelas rotas
 > indentifica qual controller vai ser utilizado
 
-# controllers
+### controllers
 
 > responsavel por processar as requisições!
 > parte inteligente da aplicação!
 
-## Http Codes - status code
+### Http Codes - status code
 
 > na faixa do 100: informativo, a solicitação foi aceita ou está sendo processada!
  <code>
@@ -115,7 +115,7 @@ res.status(400).json({ name, email });
 res.status(500).json({ name, email });
 </code>
 
-## middlewares
+### middlewares
 
 o que é?
 
@@ -137,7 +137,7 @@ function myMiddleware(req, res, next) {
 }
 </code>
 
-## Utils
+### Utils
 
 > Tratamento de exceções, erros que não forma mapeados ainda
 
