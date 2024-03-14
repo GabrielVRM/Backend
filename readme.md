@@ -91,26 +91,55 @@ app.get('/', (req, res) => {
 ## Http Codes - status code
 
 > na faixa do 100: informativo, a solicitação foi aceita ou está sendo processada!
-> <code>
-> res.status(201).json({ name, email });
-> </code>
+ <code>
+ res.status(201).json({ name, email });
+ </code>
 
 > na faixa do 200: sucesso, algum tipo de sucesso de requisição!
-> <code>
-> res.status(201).json({ name, email });
-> </code>
+<code>
+res.status(201).json({ name, email });
+</code>
 
 > na faixa do 300: redirecionamento
-> <code>
-> res.status(300).json({ name, email });
-> </code>
+<code>
+res.status(300).json({ name, email });
+</code>
 
 > na faixa do 400: erro do cliente, não autorizado, pagína não encontrada
-> <code>
-> res.status(400).json({ name, email });
-> </code>
+<code>
+res.status(400).json({ name, email });
+</code>
 
 > na faixa do 500: erro do servidor, interno.
-> <code>
-> res.status(500).json({ name, email });
-> </code>
+<code>
+res.status(500).json({ name, email });
+</code>
+
+## middlewares
+
+o que é?
+
+> O middleware é um tipo de segurança, ele faz um check-up da requisição feita pelo cliente antes que a requisição vá até a função (controller)
+> ele intercepta o dado!
+
+conceitos:
+
+- Executar qualquer código
+- Fazer mudanças nos objetos de solicitação-reposta
+- Encerrar o ciclo de solicitação-reposta
+- Chamar o proximo middleware na pilha
+
+<code>
+function myMiddleware(req, res, next) {
+  console.log('voce passou pelo middleware');
+  if (!req.body.isAdmin) res.json({ message: 'user unautrorized' });
+  next();
+}
+</code>
+
+## Utils
+
+> Tratamento de exceções, erros que não forma mapeados ainda
+
+> Estartegia para que nenhum erro inoportuno tire nossa aplicação do ar!!
+
