@@ -143,3 +143,10 @@ function myMiddleware(req, res, next) {
 
 > Estartegia para que nenhum erro inoportuno tire nossa aplicação do ar!!
 
+
+### Migrations 
+> automatização da criação de tabelas no banco de dados, pelo node js 
+
+
+
+
