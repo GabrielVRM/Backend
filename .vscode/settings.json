@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": "explicit",
+    "prettier.trailingComma": "all"
+  },
+  "editor.formatOnSave": true,
+  "cSpell.words": ["habilitar"]
+}
